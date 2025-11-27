@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* === PALETA VALHALLA === */
+:root {
+    --vino: #6F1D1B;
+    --dorado: #E0B85B;
+    --marron-oscuro: #f19232;
+    --marron-medio: #99582A;
+    --beige: #FFF5DE;
+    --blanco: #FFFFFF;
+}
+
+/* ====== GENERAL ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, var(--vino), var(--marron-oscuro));
+    color: var(--beige);
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* ====== LOGIN ====== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--vino), var(--marron-medio));
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    text-align: center;
+    color: var(--beige);
+}
+
+.login-box h2 {
+    color: var(--dorado);
+    font-weight: 800;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.login-box label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--beige);
+    color: var(--marron-oscuro);
+    font-size: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.login-box input:focus {
+    outline: none;
+    box-shadow: 0 0 8px var(--dorado);
+}
+
+/* Botones */
+.login-box button {
+    background: linear-gradient(135deg, var(--dorado), var(--vino));
+    border: none;
+    color: var(--blanco);
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.login-box button:hover {
+    background: linear-gradient(135deg, var(--vino), var(--dorado));
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ====== MENÚ (NAVBAR) ====== */
+.navbar-custom {
+    background: linear-gradient(90deg, var(--vino), var(--marron-oscuro));
+    color: var(--beige);
+    padding: 12px 25px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 800;
+    color: var(--dorado);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-custom a {
+    color: var(--beige);
+    font-weight: 600;
+    margin: 0 12px;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navbar-custom a:hover {
+    color: var(--dorado);
+}
+
+.navbar-custom a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--dorado);
+    transition: width 0.3s;
+}
+
+.navbar-custom a:hover::after {
+    width: 100%;
+}
+
+/* ====== TABLA DE USUARIOS ====== */
+.table {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: var(--vino);
+    color: var(--beige);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.table tbody tr {
+    transition: 0.3s;
+    background-color: #fff; /* Fondo sólido sin transparencias */
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 215, 140, 0.2);
+    transform: scale(1.01);
+}
+
+/* Quitamos cualquier brillo o sombra de celdas */
+.table td {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+
+/* ====== BOTONES ACCIÓN ====== */
+.btn-warning {
+    background-color: var(--dorado);
+    color: var(--vino);
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-warning:hover {
+    background-color: var(--vino);
+    color: var(--beige);
+}
+
+.btn-danger {
+    background-color: var(--marron-medio);
+    color: var(--beige);
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: var(--vino);
+}
+
+.btn-secondary {
+    background-color: var(--vino);
+    color: var(--beige);
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--dorado);
+    color: var(--vino);
+}
+
+/* ====== FOOTER ====== */
+.footer {
+    background-color: var(--vino);
+    color: var(--beige);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --vino: #6F1D1B;
+    --dorado: #BB9457;
+    --marron-oscuro: #432818;
+    --marron-medio: #99582A;
+    --beige: #FFE6A7;
+    --blanco: #FFF9F5;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, var(--vino), var(--marron-oscuro));
+    color: var(--beige);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    color: var(--beige);
+    font-size: 1.8em;
+    margin-bottom: 1.5em;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+form {
+    background: rgba(255, 230, 167, 0.1);
+    padding: 2em 3em;
+    border-radius: 15px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    padding: 10px;
+    font-weight: 600;
+    color: var(--beige);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 220px;
+    padding: 8px;
+    border: 2px solid var(--dorado);
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--beige);
+    box-shadow: 0 0 8px var(--dorado);
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: var(--dorado);
+    color: var(--marron-oscuro);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: var(--beige);
+    color: var(--vino);
+    transform: scale(1.07);
+    box-shadow: 0 4px 10px rgba(255, 230, 167, 0.5);
+}
+
+p {
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
